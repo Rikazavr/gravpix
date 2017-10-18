@@ -1,24 +1,180 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+@charset "utf-8";
+
+@import "normalize";
+@import "reset";
+@import "fonts";
+@import "colors";
+
+
+// basic style
+
+body{
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+.container{
+    position: relative;
+    height: calc(100vh - 50px);
+    padding: 50px 0 0 50px;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    display: inline-block;
+    width: 86px;
+    height: 35px;
+}
+
+.header__logo{
+    height: 35px;
+}
+
+.navigation{
+    
+}
+
+.navigation__item{
+    display: inline-block;
+    margin-right: 75px;
+}
+
+.navigation__link{
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.lang-switch{
+    height: 46px;
+    width: 106px;
+    
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    
+    -webkit-box-shadow: inset 120px 40px 50px -60px $red;
+    -moz-box-shadow: inset 120px 40px 50px -60px $red;
+    box-shadow: inset 120px 40px 50px -60px $red;
+    
+    -webkit-transition: box-shadow 1s;
+    transition: box-shadow 1s;
+    
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.lang-switch:hover{
+    box-shadow: inset 200px 40px 50px -60px $red;
+}
+
+.greeting{
+    width: 40%;
+    margin-top: 10%;
+    
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.46em;
+}
+
+.subtext{
+    font-size: 18px;
+}
+
+.greeting__subtext{
+    margin-top: 100px;
+    line-height: 1em;
+}
+
+.subtext__amp{
+    color: $red;
+    margin: 0 20px;
+}
+
+.contact{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.contact__link{
+    display: inline-block;
+    width: 310px;
+    height: 50px;
+    margin-top: 35px;
+    padding-left: 45px;
+    
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 50px;
+    color: #000;
+    
+    background: linear-gradient(-45deg, rgba(255,0,0,0) 15px, rgba(255,24,35,1) 0);
+  
+    -webkit-box-shadow: inset 240px 10px 140px -100px rgba(255,255,255,1);
+    -moz-box-shadow: inset 240px 10px 140px -100px rgba(255,255,255,1);
+    box-shadow: inset 240px 10px 140px -100px rgba(255,255,255,1);
+    
+    -webkit-transition: box-shadow 1s;
+    transition: box-shadow 1s;
+}
+
+.contact__link:hover{
+    box-shadow: inset 340px 10px 140px -100px rgba(255,255,255,1);
+}
+
+.arm{
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    
+    width: 440px;
+    height: 930px;
+    
+    background: url(../images/hand.png) center no-repeat;
+}
+
+.footer{
+    position: relative;
+    height: 327px;
+    
+    color: #fff;
+    text-transform: uppercase;
+    
+    background: red;
+    background: -webkit-linear-gradient(left, $red , #fff);
+    background: -o-linear-gradient(right, $red , #fff);
+    background: -moz-linear-gradient(right, $red , #fff);
+    background: linear-gradient(to right, $red , #fff);
+}
+
+.social{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+.social__capture{
+    display: inline-block;
+    margin-right: 220px;
+}
+
+.social__link{
+    margin-right: 40px;
+    color: #fff;
+    text-decoration: none;
 }
